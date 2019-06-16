@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: calibri;
+  background: white;
+  color: #393c45; }
+
+.wrapper {
+  background: lightgrey;
+  font-family: calibri; }
+
+.table-footer {
+  background: black;
+  font-family: calibri;
+  color: white; }
+
+.body-first {
+  background: lightblue;
+  font-family: calibri;
+  color: black; }
+
+.body-green {
+  background: lightgreen;
+  font-family: calibri;
+  color: black; }
+
+.body-note {
+  border: 1px solid black;
+  font-family: calibri;
+  color: black;
+  font-size: 9; }
+
+.body-last {
+  border: 1px solid black;
+  font-family: calibri;
+  color: black;
+  font-size: 8; }
+
+table, th, td {
+  border: 1px solid black; }
+
+.colspan7 {
+  colspan: 7; }
+
+.alignRight {
+  text-align: right;
+  display: inline-block;
+  font-size: 16px; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s; }
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent; }
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1; }
