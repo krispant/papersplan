@@ -14,7 +14,7 @@ class CalculateGTI extends Component {
          field: "NameOfBenefit", 
          headerTooltip : "Name of Benefit",
          cellStyle: function (params) {
-                    if (params.value == 'SLAB II') {
+                    if (params.value === 'SLAB II') {
                         return { 'background-color': 'lightgrey', 'font-size': '16px' };
                     } 
                 }
@@ -22,7 +22,7 @@ class CalculateGTI extends Component {
        },
        { field: "Section",
         cellStyle: function (params) {
-                    if ( params.value == "Expected ROI") {
+                    if ( params.value === "Expected ROI") {
                         return { 'background-color': 'lightgrey', 'font-size': '16px' };
                     } 
                 }
@@ -30,7 +30,7 @@ class CalculateGTI extends Component {
       {headerName :"ROI/Benefit", 
       field: "ROI_Benefit",
       cellStyle: function (params) {
-                    if (params.value == "Returns on 5th year" || params.value == "Returns (IRR) 5th year") {
+                    if (params.value === "Returns on 5th year" || params.value === "Returns (IRR) 5th year") {
                         return { 'background-color': 'lightgrey', 'font-size': '16px' };
                     } 
                 }
@@ -43,60 +43,58 @@ class CalculateGTI extends Component {
         headerName : "More information",
         field:"More_information",
         cellRenderer: function(params) {
-          if(params.value == "LIC"){
+          if(params.value === "LIC"){
             return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&ei=1TruXNu_LNnbrQH784KQCg&q=life+insurance+policy+tax+benefit&oq=life+insurance+policy+tax+benefit&gs_l=psy-ab.3..0j0i5i30l2j0i8i30.11515.13673..14658...0.0..0.124.704.5j2......0....1..gws-wiz.......0i71j0i7i30j0i8i7i30j0i8i13i30j0i7i5i30j0i13j0i13i5i30.RWnoJJoWGF0" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "MIP"){
+          }else if (params.value === "MIP"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&ei=hEPuXObgDtKoyAOZuKTgBQ&q=Section+80D%3A+Income+Tax+Deduction+For+Medical+Insurance+block&oq=Section+80D%3A+Income+Tax+Deduction+For+Medical+Insurance+block&gs_l=psy-ab.3...3601.5057..5365...1.0..0.257.1046.0j4j2......0....1..gws-wiz.......0i71j33i21j33i160.R8aQXX90A6Q" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "MIPP"){
+          }else if (params.value === "MIPP"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&ei=ikPuXIb5I8G7rQHfj43QDg&q=Section+80D%3A+Income+Tax+Deduction+For+Medical+Insurance&oq=Section+80D%3A+Income+Tax+Deduction+For+Medical+Insurance&gs_l=psy-ab.3..35i39.4569.4569..4860...0.0..0.98.98.1......0....1..gws-wiz.......0i71.cy_scc6VAAE" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "ChildTutionfee"){
+          }else if (params.value === "ChildTutionfee"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=f0buXOurDtLLrQGA7L34BA&q=children+education+allowance+tax+benefits&oq=children+education+allowance+tax+benefits&gs_l=psy-ab.3..0i22i30.2789.9642..10246...1.0..0.127.903.9j1......0....1..gws-wiz.......0i71.ZIth-T6AO44" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "MedHan"){
+          }else if (params.value === "MedHan"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=sEbuXJC2Cta0rQHH2q6AAw&q=Maintenance+%2FMedical+treatment+of+Handicapped+dependents+income+tax&oq=Maintenance+%2FMedical+treatment+of+Handicapped+dependents+income+tax&gs_l=psy-ab.3...7690.10464..10632...0.0..0.234.1395.0j10j1......0....1..gws-wiz.......0i71j0i22i30j33i22i29i30j33i10.ibvirF9zpqY" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "SelfDis"){
+          }else if (params.value === "SelfDis"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=u0buXK6ZL4L7rQHK87eIDw&q=Deduction+in+case+of+Disability-Only+Self&oq=Deduction+in+case+of+Disability-Only+Self&gs_l=psy-ab.3..33i160.25080.27674..27914...1.0..0.165.287.0j2......0....2j1..gws-wiz.......0i71.80xrXJK6OwU" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "MedTrt"){
+          }else if (params.value === "MedTrt"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=2EbuXKT1KM_69QOB8pCgAw&q=Deduction+in+respect+of+Medical+Treatment&oq=Deduction+in+respect+of+Medical+Treatment&gs_l=psy-ab.3..0l2j0i22i30l3.45393.45393..45522...0.0..0.103.103.0j1......0....2j1..gws-wiz.......0i71.tBDkTuBxQNk" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "NoHRA"){
+          }else if (params.value === "NoHRA"){
               return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=BkfuXKC2Noj6rQHsta-gDA&q=No+HRA+Received+but+rent+paid&oq=No+HRA+Received+but+rent+paid&gs_l=psy-ab.3..0i71l8.32384.32384..32423...0.0..0.0.0.......0....2j1..gws-wiz.IkHwFHLU3QM" target="_blank">'+params.value +'</a>';
-          }else if (params.value == "SrCitizenSavingsAcc"){
+          }else if (params.value === "SrCitizenSavingsAcc"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=UUfuXLqKO5Pt9QO3q4DYBw&q=Section+80TTB&oq=Section+80TTB&gs_l=psy-ab.3..0l5j0i30l2.6562.8501..8784...0.0..0.107.886.6j3......0....1..gws-wiz.......0i71j0i7i30j0i67j0i10j0i13i30j0i13i10.uxDkw7wNh7k" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "SavingsAcc"){
+          }else if (params.value === "SavingsAcc"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=ekfuXNTVOISvyAPuka6oBA&q=80TTA&oq=80TTA&gs_l=psy-ab.3..0i71l8.11176.11176..11195...0.0..0.0.0.......0....2j1..gws-wiz.QOcWFfh1_m8" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "EduLoan"){
+          }else if (params.value === "EduLoan"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=mkfuXKGtMIWoyAOY34vIBQ&q=Section+80E&oq=Section+80E&gs_l=psy-ab.3..0l2j0i20i263j0l7.6953.10298..10626...1.0..0.117.1202.7j5......0....1..gws-wiz.......0i71j35i39j0i131j0i131i67j0i67j0i10.gjX8lZqf2Do" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "PF"){
+          }else if (params.value === "PF"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=hUjuXLiKCpG2rQGu8LnwCA&q=EPF+tax+benefit&oq=EPF+tax+benefit&gs_l=psy-ab.3..35i39l2j0i8i30l2.17907.17907..18701...0.0..0.95.95.1......0....1..gws-wiz.......0i71.RoQUJzuN2AA" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "HousingPrin"){
+          }else if (params.value === "HousingPrin"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=ukjuXLfaBYvb9QP9qZ6ADg&q=Housing+Principal+including+Registration%2F+Stamp+Duty+tax+benefit&oq=Housing+Principal+including+Registration%2F+Stamp+Duty+tax+benefit&gs_l=psy-ab.3...1005.2715..2854...0.0..0.236.1359.0j5j3......0....1..gws-wiz.......0i71j35i302i39j33i22i29i30j33i10.gZWo5dcNwEw" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "NPSEx"){
+          }else if (params.value === "NPSEx"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=3EjuXIejCIjb9QPwqIewCg&q=80CCD1+NPS&oq=80CCD1+NPS&gs_l=psy-ab.3..0j0i22i30j0i22i10i30j0i22i30.8963.10099..10446...0.0..0.175.463.2j2......0....1..gws-wiz.......0i71.JqxhvTdmYh0" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "Sukanya"){
+          }else if (params.value === "Sukanya"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=-0juXI7TKIO-9QPkp5KgDw&q=sukanya+samriddhi+scheme+tax+benefit&oq=Sukanya+Samriddhi+Scheme+tax&gs_l=psy-ab.1.0.0i20i263j0j0i22i30l8.823.2138..3941...0.0..0.98.378.4......0....1..gws-wiz.......0i71j0i67.9IstPBak4U8" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "PPF"){
+          }else if (params.value === "PPF"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=QEnuXOybNpuR9QO5oLrYCQ&q=Public+provident+fund+%28PPF%29+tax+benefits&oq=Public+provident+fund+%28PPF%29+tax+benefits&gs_l=psy-ab.3..33i22i29i30.1485.7273..7414...0.0..0.162.1296.4j8......0....1..gws-wiz.......0i71j0i20i263j0j0i22i30j33i21j33i160j33i10.LlHqtZRzDTI" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "NSC"){
+          }else if (params.value === "NSC"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=2EnuXJuKCsSb9QOS-KXICA&q=National+Savings+Certificate+%28NSC%29+Tax+&oq=National+Savings+Certificate+%28NSC%29+Tax+&gs_l=psy-ab.3..35i39.7883.7883..8344...0.0..0.131.131.0j1......0....1..gws-wiz.......0i71.JXydRcJLPSg" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "PensionPolicy"){
+          }else if (params.value === "PensionPolicy"){
               return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=SUnuXPaYC4Hf9QPz47H4Aw&q=Section+80CCC&oq=Section+80CCC&gs_l=psy-ab.3..0j0i20i263l2j0l3j0i10j0l3.19693.22827..23186...1.0..0.108.903.9j1......0....1j2..gws-wiz.......0i71j0i131j0i67j35i39j0i131i67.H-lkAvkjfdw" target="_blank">'+params.value +'</a>';
-          }else if (params.value == "POSnrCitizen"){
+          }else if (params.value === "POSnrCitizen"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=GEnuXK-zENOCyAOK4qcY&q=Post+office+Sr.+Citizen+Scheme&oq=Post+office+Sr.+Citizen+Scheme&gs_l=psy-ab.3..0j0i8i30.13390.19165..19359...7.0..0.232.1569.8j6j1......0....1..gws-wiz.......0i71j0i7i30j0i8i7i30j0i7i5i30j0i13i30j0i5i30j0i8i13i30.SzMQWv_ksmY" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "5YrPO"){
+          }else if (params.value === "5YrPO"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&q=Five+Year+Time+Deposit+Scheme+in+Post+Office&spell=1&sa=X&ved=0ahUKEwiPgamJsMDiAhWBfH0KHZAKBo8QBQgrKAA&biw=1536&bih=750" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "FD"){
+          }else if (params.value === "FD"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=t0nuXOngCMW6rQG7nZ-gCw&q=Fixed+Deposit+in+a+Scheduled+Bank+tax+benefit+&oq=Fixed+Deposit+in+a+Scheduled+Bank+tax+benefit+&gs_l=psy-ab.3..35i302i39.2695.2695..4957...0.0..0.92.92.1......0....1..gws-wiz.......0i71.w-fPtDjuHmk" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "ELSS"){
+          }else if (params.value === "ELSS"){
               return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=DUruXOWUNNK1rQGQgqz4Aw&q=elss+mutual+fund+tax+benefit&oq=Mutual+Fund+%2F+ELSS+tax+ben&gs_l=psy-ab.1.0.0i22i30.15248.17050..18463...0.0..0.203.1068.1j7j1......0....2j1..gws-wiz.......0i71.cOAcs29uTxY" target="_blank">'+params.value +'</a>';
-          }else if (params.value == "ULNP"){
+          }else if (params.value === "ULNP"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=fkruXP_TGpH9rQHStIC4DQ&q=unit+linked+insurance+plan+taxability&oq=Unit+Linked+Insurance+Plan+tax&gs_l=psy-ab.1.0.0l2j0i22i30l4.1880.2283..3660...0.0..0.113.306.1j2......0....1..gws-wiz.......0i71j0i20i263.svI-S_IMUgU" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "NPS"){
+          }else if (params.value === "NPS"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=pUruXMvNBcWw9QO3qJ2ICQ&q=80CCD1B&oq=80CCD1B&gs_l=psy-ab.3..0i71l8.29249.29249..29253...0.0..0.0.0.......0....2j1..gws-wiz.dCkAXB1bmpk" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "Bonds"){
+          }else if (params.value === "Bonds"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=w0ruXPWaCIKurQH1rKu4Cg&q=80CCF&oq=80CCF&gs_l=psy-ab.3..0i71l8.14610.14610..14687...0.0..0.0.0.......0....2j1..gws-wiz.ca5bDyYH0Qw" target="_blank">'+ params.value+'</a>';
           }
         }
-
-
       }
       ],
      
@@ -1898,25 +1896,25 @@ class CalculateGTI extends Component {
             var value = params.value;
               console.log("value " + value);
 
-             if (value == "Expenses" || value == "Investment - Debt" ||
-                  value == "Investment - Equity" || value == "Additional benefit of 50,000 even after fully utilizing 150,000 limit"
-                  || value == "80G - Donations benefits has to be claimed by Empoyee while filing individual returns" ||
-                  value == "1" || value == "2" || value == "3" || value == "4" || value == "5" || value =="6" || value =="7"
-                  || value == "8" || value == "9" || value == "10" || value == "11" )
+             if (value === "Expenses" || value === "Investment - Debt" ||
+                  value === "Investment - Equity" || value === "Additional benefit of 50,000 even after fully utilizing 150,000 limit"
+                  || value === "80G - Donations benefits has to be claimed by Empoyee while filing individual returns" ||
+                  value === "1" || value === "2" || value === "3" || value === "4" || value === "5" || value ==="6" || value ==="7"
+                  || value === "8" || value === "9" || value === "10" || value === "11" )
                     {
                       return value;
-                    }else if ( value == "+" || value == "." || value == "i"){
+                    }else if ( value === "+" || value === "." || value === "i"){
                       return 1;
-                    } else if (value == "*" || value == ".." || value == "ii"){
+                    } else if (value === "*" || value === ".." || value === "ii"){
                         return 2;
-                    }else if(value == "iii") {return 3;}
-                    else if(value == "iv") {return 4;}
-                    else if(value == "v") {return 5;}
-                    else if (value == "vi") {return 6;}
-                    else if (value == "vii") {return 7;} 
-                    else if (value == "viii") {return 8;}
-                    else if (value == "ix") {return 9;}
-                    else if (value == "x") {return 10;}
+                    }else if(value === "iii") {return 3;}
+                    else if(value === "iv") {return 4;}
+                    else if(value === "v") {return 5;}
+                    else if (value === "vi") {return 6;}
+                    else if (value === "vii") {return 7;} 
+                    else if (value === "viii") {return 8;}
+                    else if (value === "ix") {return 9;}
+                    else if (value === "x") {return 10;}
                     else{
                       return " ";
                     }
@@ -1924,9 +1922,9 @@ class CalculateGTI extends Component {
         cellRenderer: "agGroupCellRenderer",
           cellStyle: function (params) {
                     var value = params.value;
-                    if (value == "Expenses" || value == "Investment - Debt" ||
-                      value == "Investment - Equity" || value == "Additional benefit of 50,000 even after fully utilizing 150,000 limit"
-                      || value == "80G - Donations benefits has to be claimed by Empoyee while filing individual returns")  {
+                    if (value === "Expenses" || value === "Investment - Debt" ||
+                      value === "Investment - Equity" || value === "Additional benefit of 50,000 even after fully utilizing 150,000 limit"
+                      || value === "80G - Donations benefits has to be claimed by Empoyee while filing individual returns")  {
                         return { 'font-weight': 'bold'  };
                     }
                 }

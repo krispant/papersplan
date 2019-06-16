@@ -17,11 +17,11 @@ class TaxCalculation extends Component {
       {headerName : "Planning tools",
       field:"Planning_tools",
       cellRenderer: function(params) {
-          if(params.value == "HRA Calculator"){
+          if(params.value === "HRA Calculator"){
             return '<a href="https://www.google.com/search?q=HRA+calculator&rlz=1C1GCEB_enIN823IN823&oq=HRA+calculator&aqs=chrome..69i57j69i60j0l4.6874j0j9&sourceid=chrome&ie=UTF-8" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "LTA Calculator"){
+          }else if (params.value === "LTA Calculator"){
              return '<a href="https://www.google.com/search?q=lta+calculator&rlz=1C1GCEB_enIN823IN823&oq=LTA+c&aqs=chrome.0.69i59j69i60j0l3j69i57.1297j0j4&sourceid=chrome&ie=UTF-8" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "HP Calculator"){
+          }else if (params.value === "HP Calculator"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&ei=xFbuXLfSDpOv9QP2waaYAQ&q=Income+from+house+property+calculator&oq=Income+from+house+property+calculator&gs_l=psy-ab.3..0l4j0i22i30l6.259995.268716..269037...1.0..0.165.4001.16j22......0....1..gws-wiz.......0i71j35i39j0i67j0i131j0i131i67j0i20i263j35i304i39j0i13.Uu-qQuhXcTw" target="_blank">'+ params.value+'</a>';
           }
       }
@@ -31,19 +31,19 @@ class TaxCalculation extends Component {
         headerName : "More information",
         field:"More_information",
         cellRenderer: function(params) {
-          if(params.value == "HRA"){
+          if(params.value === "HRA"){
             return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=5UruXNK4L9H79QOknIrIDw&q=House+Rent+Allowance+%28HRA%29&oq=House+Rent+Allowance+%28HRA%29&gs_l=psy-ab.3..0i71l8.57775.57775..57875...0.0..0.0.0.......0....2j1..gws-wiz.kL43kE2zQ9M" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "LTA"){
+          }else if (params.value === "LTA"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=IEvuXIDkHpj_9QOcv7LIAQ&q=Leave+Travel+Allowance+%28LTA%29&oq=Leave+Travel+Allowance+%28LTA%29&gs_l=psy-ab.3..0j0i22i30l4.14296.14296..14437...0.0..0.107.107.0j1......0....2j1..gws-wiz.......0i71.dDNq2x8_htg" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "StdDed"){
+          }else if (params.value === "StdDed"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=L0vuXPLKMsXc9QPqmI_4CA&q=Standard+deduction+income+tax+fy+2019-20&oq=Standard+deduction+income+tax+fy+2019-20&gs_l=psy-ab.3..0i22i30l2.14769.21806..22105...1.0..0.122.2320.16j8......0....2j1..gws-wiz.......0i71j35i39j0j0i20i263.DRXuOarxEYM" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "EmpTaxDed"){
+          }else if (params.value === "EmpTaxDed"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=t0vuXKiiCNDb9QPLq5bYAQ&q=Employment+tax+deductions+India&oq=Employment+tax+deductions+India&gs_l=psy-ab.3..0i22i30l6.3230.5869..5989...0.0..0.123.779.2j5......0....1..gws-wiz.......0i71j35i39j0i30j0i5i30j0i7i5i30.nIdXTFoU84I" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "EntTax"){
+          }else if (params.value === "EntTax"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=_0vuXMmhOIKurQH1rKu4Cg&q=Entertainment+Tax+Check+Features%2C+Tax+Rates%2C+Applicability&oq=Entertainment+Tax+Check+Features%2C+Tax+Rates%2C+Applicability&gs_l=psy-ab.3...4918.4918..5193...0.0..0.107.107.0j1......0....1..gws-wiz.......0i71.U3qx-TmRaRE" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "PropTax"){
+          }else if (params.value === "PropTax"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=JEzuXPW1KMq5rQGG0oqoBw&q=income+from+house+property+tax+information&oq=income+from+house+property+tax+info&gs_l=psy-ab.1.0.33i22i29i30.2536.9758..11156...2.0..0.145.2012.9j10......0....1..gws-wiz.......0i71j0i22i30j35i39j0i22i10i30j0.VuQbe45AUMU" target="_blank">'+ params.value+'</a>';
-          }else if (params.value == "HousLoanBen"){
+          }else if (params.value === "HousLoanBen"){
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&biw=1536&bih=750&ei=0kruXPHdJIf5rQG2q6ngDA&q=80EE&oq=80EE&gs_l=psy-ab.3..35i39l2j0i20i263j0l7.18267.18267..18443...0.0..0.104.104.0j1......0....2j1..gws-wiz.......0i71.MY5WYIv14Zk" target="_blank">'+ params.value+'</a>';
           }
         }
@@ -848,8 +848,8 @@ class TaxCalculation extends Component {
         valueFormatter : function (params){
             var value = params.value;
               console.log("value " + value);
-              if(value == "1" || value == "2" || value == "3" || value == "4" || value == "5" || value =="6" || value =="7"
-                  || value == "8" || value == "9" || value == "10" || value == "11" || value == "12" ||value == "13" || value == "14" ){
+              if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5" || value ==="6" || value ==="7"
+                  || value === "8" || value === "9" || value === "10" || value === "11" || value === "12" ||value === "13" || value === "14" ){
                       return value;
                     }else{
                       return " ";
