@@ -6,7 +6,7 @@
   "dependencies": {
     "webpack-dev-server": "2.4.5",
     "jquery": "1.9.1",
-    "popper": "1.0.1",
+   "popper.js": "^1.15.0",
     "ag-grid": "^18.1.2",
     "ag-grid-community": "^20.2.0",
     "ag-grid-enterprise": "^20.2.0",
