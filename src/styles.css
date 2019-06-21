@@ -81,3 +81,7 @@ table, th, td {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1; }
+
+.cell-wrap-text {
+    white-space: normal !important;
+}
