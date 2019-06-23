@@ -39,9 +39,6 @@ body {
 table, th, td {
   border: 1px solid black; }
 
-.colspan7 {
-  colspan: 7; }
-
 .alignRight {
   text-align: right;
   display: inline-block;
@@ -84,4 +81,11 @@ table, th, td {
 
 .cell-wrap-text {
     white-space: normal !important;
+}
+
+.LogoImg {
+  
+  height: 80px;
+  width: 150px;
+
 }

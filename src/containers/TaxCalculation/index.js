@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AgGridReact } from 'ag-grid-react';
+import CalculateGTI from '../../components/CalculateGTI/CalculateGTI'
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import 'ag-grid-enterprise';
@@ -869,8 +870,11 @@ onGridReady = params => {
   render() {
     return (
         <div style={{ width: "100%", height: "100%" }}>
-       
+      
       <div 
+        className="col-12">
+      
+      <div
         className="ag-theme-blue"
         style={{ 
         height: '550px', 
@@ -889,19 +893,11 @@ onGridReady = params => {
               >
         </AgGridReact>
       </div>
-      <br />
-
-     <center><a href="/CalculateGTI">Calculate GTI</a></center>
-      
-
-
-
      
-      <br />
-      <div className="body-note">Note: We are not tax or investment advisors or planners. We do not cross sale or advertise or advise any financial products, in future we aim to provide fee based unbiased information and planning services for our users so they can take an informed decision. Currently we are conducting a research and we do not assume any liability on use of this website.</div>
-     <div className="body-last">Disclaimer: By providing links to any other sites, we do not guarantee, approve, or endorse the information or products available on these sites.</div>
-      <br />
-      <br />
+
+          <CalculateGTI />
+
+    </div>
      </div>
     );
   }

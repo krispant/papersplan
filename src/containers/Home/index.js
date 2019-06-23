@@ -7,9 +7,10 @@ class Home extends Component {
    
 
     return (
+     <div className="container"> 
       <div className="home mt-5">
         <div className="header">
-        <span className="alignRight"><a href="" data-toggle="tooltip" title="feedback@papersplans.com">contact us</a></span>
+        <span className="" style={{position: 'absolute', right: 150}}><a href="" data-toggle="tooltip" title="feedback@papersplans.com">contact us</a></span>
          <center><h2 className="mb-3">Paper$Plan</h2></center>
           <div className="wrapper"><center>Personal finance information center and do it yourself planning tool. </center></div>
           <br />
@@ -46,7 +47,7 @@ class Home extends Component {
                   <td>25</td>
                   <td>10%</td>
                   <td>55</td>
-                  <td>14,857,522</td>
+                  <td>18,094,342</td>
                 </tr>
               </table>  
           </center> 
@@ -75,7 +76,7 @@ class Home extends Component {
              <br />
         </div>
       </div>  
-         
+    </div>     
     )
   }
 }

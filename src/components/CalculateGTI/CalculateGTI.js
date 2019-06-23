@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
@@ -1976,7 +1976,6 @@ onGridReady = params => {
       <br />
       <div className="body-note">Note: We are not tax or investment advisors or planners. We do not cross sale or advertise or advise any financial products, in future we aim to provide fee based unbiased information and planning services for our users so they can take an informed decision. Currently we are conducting a research and we do not assume any liability on use of this website.</div>
      <div className="body-last">Disclaimer: By providing links to any other sites, we do not guarantee, approve, or endorse the information or products available on these sites.</div>
-      <br />
       <br />
       </div>
     );
