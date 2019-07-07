@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AgGridReact } from 'ag-grid-react';
+import CalculateGTI from '../../components/CalculateGTI/CalculateGTI'
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import 'ag-grid-enterprise';
@@ -11,9 +12,9 @@ class TaxCalculation extends Component {
     this.state = {
       columnDefs: [ 
       { 
-        field: "Particulars"
+        field: "Particulars", cellClass: "cell-wrap-text", autoHeight: true
       }, { field: "Section"},{headerName :"ROI/Benefit", field: "ROI_Benefit"},
-      {headerName : "Calculate your taxes",field : "Calculate_your_taxes"},{headerName : "Plan your taxes yourself for FY 2019-20",field: "Plan_your_taxes_yourself_for_FY_2019_20"},
+      {headerName : "Calculate your taxes",field : "Calculate_your_taxes"},{headerName : "Plan your taxes yourself for FY 2019-20",field: "Plan_your_taxes_yourself_for_FY_2019_20", cellClass: "cell-wrap-text", autoHeight: true},
       {headerName : "Planning tools",
       field:"Planning_tools",
       cellRenderer: function(params) {
@@ -25,8 +26,8 @@ class TaxCalculation extends Component {
              return '<a href="https://www.google.com/search?rlz=1C1GCEB_enIN823IN823&ei=xFbuXLfSDpOv9QP2waaYAQ&q=Income+from+house+property+calculator&oq=Income+from+house+property+calculator&gs_l=psy-ab.3..0l4j0i22i30l6.259995.268716..269037...1.0..0.165.4001.16j22......0....1..gws-wiz.......0i71j35i39j0i67j0i131j0i131i67j0i20i263j35i304i39j0i13.Uu-qQuhXcTw" target="_blank">'+ params.value+'</a>';
           }
       }
-      },{headerName : "Ideal claim",field:"Ideal_claim" },{field:"Limit"},{headerName : "Proof to collect and submit",field: "Proof_to_collect_and_submit"},
-      {headerName : "What to fill while filing ITR",field:"What_to_fill_while_filing_ITR"},
+      },{headerName : "Ideal claim",field:"Ideal_claim", cellClass: "cell-wrap-text", autoHeight: true  },{field:"Limit",  cellClass: "cell-wrap-text", autoHeight: true},{headerName : "Proof to collect and submit",field: "Proof_to_collect_and_submit"},
+      {headerName : "What to fill while filing ITR",field:"What_to_fill_while_filing_ITR",  cellClass: "cell-wrap-text", autoHeight: true},
       {
         headerName : "More information",
         field:"More_information",
@@ -842,7 +843,7 @@ class TaxCalculation extends Component {
       autoGroupColumnDef: {
         headerName: " ",
         field: "No",
-        width : 150,
+        width : 60,
         headerTooltip : "All amounts are in Indian Rupees",
         cellRendererParams: { suppressCount: true },
         valueFormatter : function (params){
@@ -863,19 +864,17 @@ class TaxCalculation extends Component {
 onGridReady = params => {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
-
-    var allColumnIds = [];
-    this.gridColumnApi.getAllColumns().forEach(function(column) {
-      allColumnIds.push(column.colId);
-    });
-    this.gridColumnApi.autoSizeColumns(allColumnIds);
+ params.columnApi.autoSizeAllColumns();
   };
 
   render() {
     return (
         <div style={{ width: "100%", height: "100%" }}>
-       
+      
       <div 
+        className="col-12">
+      
+      <div
         className="ag-theme-blue"
         style={{ 
         height: '550px', 
@@ -890,22 +889,15 @@ onGridReady = params => {
               getDataPath={this.state.getDataPath}
               autoGroupColumnDef={this.state.autoGroupColumnDef}
               onGridReady={this.onGridReady}
+               suppressContextMenu={true}
               >
         </AgGridReact>
       </div>
-      <br />
-
-     <center><a href="/CalculateGTI">Calculate GTI</a></center>
-      
-
-
-
      
-      <br />
-      <div className="body-note">Note: We are not tax or investment advisors or planners. We do not cross sale or advertise or advise any financial products, in future we aim to provide fee based unbiased information and planning services for our users so they can take an informed decision. Currently we are conducting a research and we do not assume any liability on use of this website.</div>
-     <div className="body-last">Disclaimer: By providing links to any other sites, we do not guarantee, approve, or endorse the information or products available on these sites.</div>
-      <br />
-      <br />
+
+          <CalculateGTI />
+
+    </div>
      </div>
     );
   }

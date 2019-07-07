@@ -39,8 +39,121 @@ body {
 table, th, td {
   border: 1px solid black; }
 
-.colspan7 {
-  colspan: 7; }
+ table.second th, table.second td {
+    padding: 0.19rem; 
+  }
+
+  table.first th, table.first td {
+    padding: 0.50rem; 
+  }
+
+
+ .content {
+  background-color: #FFF;
+  padding: 30px;
+}
+
+.padding-50-left{
+padding-left: 50px;
+}
+
+.navBarClr{
+   background-color: #ab479140;
+}
+
+
+.padding-20-right{
+padding-right: 20px;
+}
+
+hr{
+   color: white;
+   background-color: white;
+}
+
+a{
+    color: white;
+    font-size: 1.2em ;
+
+  }
+
+  a:hover 
+  { 
+    text-decoration: none; 
+  } 
+
+.nav-item a {
+  font-weight: bold;
+}
+
+.dropdown-menu a{
+  font-weight: normal;
+}
+
+.service-div .row .col-md-6:first-child{
+     background: #0085d6; 
+     padding-left: 0;
+    padding-right: 0;
+}
+.service-div .sec {
+   padding: 40px;
+    text-align: center;
+    color: #FFF;
+   
+}
+
+.service-div1 .sec {
+   padding: 40px;
+    text-align: center;
+    color: #FFF;
+   
+}
+.service-div .row .col-md-4:first-child{
+     background: #0085d6; 
+     padding-left: 0;
+    padding-right: 0;
+}
+
+.service-div .row .col-md-4:nth-child(2) {
+     background: #9ea517;
+}
+.service-div .row .col-md-4:nth-child(3) {
+    background: #e17e25;
+     padding-left: 0;
+    padding-right: 0;
+}
+
+.service-div1 .row .col-md-4:first-child{
+     background: #000; 
+     padding-left: 0;
+    padding-right: 0;
+}
+
+.service-div1 .row .col-md-4:nth-child(2) {
+    background: #0085d6; 
+}
+
+
+.service-div1 .row .col-md-4:last-child {
+    background: #9ea517;
+     padding-left: 0;
+    padding-right: 0;
+}
+
+.service-div .row .col-md-6:last-child {
+    background: #9ea517;
+     padding-left: 0;
+    padding-right: 0;
+}
+
+.service-div{
+  margin:15px;
+  padding-top:18px;
+}  
+.service-div1{
+  margin:15px;
+  padding-top:18px;
+}  
 
 .alignRight {
   text-align: right;
@@ -81,3 +194,14 @@ table, th, td {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1; }
+
+.cell-wrap-text {
+    white-space: normal !important;
+}
+
+.LogoImg {
+  
+  height: 80px;
+  width: 150px;
+
+}

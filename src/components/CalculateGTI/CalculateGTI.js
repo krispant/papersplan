@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
@@ -17,7 +17,8 @@ class CalculateGTI extends Component {
                     if (params.value === 'SLAB II') {
                         return { 'background-color': 'lightgrey', 'font-size': '16px' };
                     } 
-                }
+                },
+         cellClass: "cell-wrap-text", autoHeight: true
 
        },
        { field: "Section",
@@ -29,6 +30,7 @@ class CalculateGTI extends Component {
       },
       {headerName :"ROI/Benefit", 
       field: "ROI_Benefit",
+      cellClass: "cell-wrap-text", autoHeight: true,
       cellStyle: function (params) {
                     if (params.value === "Returns on 5th year" || params.value === "Returns (IRR) 5th year") {
                         return { 'background-color': 'lightgrey', 'font-size': '16px' };
@@ -36,9 +38,9 @@ class CalculateGTI extends Component {
                 }
       },
       {headerName : "Calculate your taxes",field : "Calculate_your_taxes"},
-      {headerName : "Calculate and write amounts (Stop when remaining balance is 499,999 or below)",field: "CalculateAndWriteAmount"},
-      {headerName : "",field:"Planning_tools"},{headerName : "Ideal claim",field:"Ideal_claim" },{field:"Limit"},{headerName : "Proof to collect and submit",field: "Proof_to_collect_and_submit"},
-      {headerName : "What to fill while filing ITR",field:"What_to_fill_while_filing_ITR"},
+      {headerName : "Calculate and write amounts (Stop when remaining balance is 499,999 or below)",field: "CalculateAndWriteAmount",cellClass: "cell-wrap-text", autoHeight: true},
+      {headerName : "",field:"Planning_tools"},{headerName : "Ideal claim",field:"Ideal_claim",  cellClass: "cell-wrap-text", autoHeight: true },{field:"Limit",  cellClass: "cell-wrap-text", autoHeight: true},{headerName : "Proof to collect and submit",field: "Proof_to_collect_and_submit",  cellClass: "cell-wrap-text", autoHeight: true},
+      {headerName : "What to fill while filing ITR",field:"What_to_fill_while_filing_ITR",  cellClass: "cell-wrap-text", autoHeight: true},
       {
         headerName : "More information",
         field:"More_information",
@@ -1880,6 +1882,7 @@ class CalculateGTI extends Component {
         
 
       ],
+     
       groupDefaultExpanded: 0,
       getDataPath: function(data) {
         return data.No;
@@ -1936,7 +1939,8 @@ onGridReady = params => {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
     this.colDef = params.colDef;
-    params.columnApi.autoSizeAllColumns();
+
+    this.gridColumnApi.autoSizeAllColumns();
   };
 
   render() {
@@ -1959,19 +1963,12 @@ onGridReady = params => {
               getDataPath={this.state.getDataPath}
               autoGroupColumnDef={this.state.autoGroupColumnDef}
               onGridReady={this.onGridReady}
+              suppressContextMenu={true}
               >
         </AgGridReact>
 
       </div>
-      <div><center>Write your email id and click on "Participate in research" below.</center></div>
-      <div><center><a href="" data-toggle="tooltip" title="We do not ask your name or other personal details which can be associated with financial infromation put by you. We only need your email id so we can verify available data. We do not share any of our users information with a third party, we will use this inforamation to conduct our research on tax planning and develop a automated tax planning tool for our users.">Click Here</a></center></div>
-
-    
-      <br />
-      <div className="body-note">Note: We are not tax or investment advisors or planners. We do not cross sale or advertise or advise any financial products, in future we aim to provide fee based unbiased information and planning services for our users so they can take an informed decision. Currently we are conducting a research and we do not assume any liability on use of this website.</div>
-     <div className="body-last">Disclaimer: By providing links to any other sites, we do not guarantee, approve, or endorse the information or products available on these sites.</div>
-      <br />
-      <br />
+      
       </div>
     );
   }
