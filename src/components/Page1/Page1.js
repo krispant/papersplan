@@ -5,6 +5,7 @@ class Page1 extends Component {
   render() {
     return (
       <div>
+        <br />
         <h5><b>Why are you using this website?</b></h5>
         <p>To optimize your income tax benefits and Increase your ROI on tax investments</p>
  
@@ -34,7 +35,7 @@ class Page1 extends Component {
 			<li>We do not store your personal financial information, however you may opt to participate in our research by providing your financial information but this will not be shared with a third party.</li>
 		</ul>
 
-		<center><a href>YouTube Video On How to file ITR for salaried individuals</a></center>
+		<center><a href="/Help" style={{'color':'black','text-decoration': 'underline'}}>YouTube Video On How to file ITR for salaried individuals</a></center>
 			<br />
 		<div className="row">
 

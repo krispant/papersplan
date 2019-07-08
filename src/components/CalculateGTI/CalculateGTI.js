@@ -1954,12 +1954,11 @@ onGridReady = params => {
         height: '550px', 
         width: "100%" }} 
       >
-        <AgGridReact id="calculateGTI"
+       <AgGridReact id="calculateGTI"
           columnDefs={this.state.columnDefs}
           rowData={this.state.rowData}
             treeData={true}
               animateRows={true}
-              suppressRowClickSelection={this.state.suppressRowClickSelection}
               groupDefaultExpanded={this.state.groupDefaultExpanded}
               getDataPath={this.state.getDataPath}
               autoGroupColumnDef={this.state.autoGroupColumnDef}
@@ -1969,14 +1968,7 @@ onGridReady = params => {
         </AgGridReact>
 
       </div>
-      <div><center>Write your email id and click on "Participate in research" below.</center></div>
-      <div><center><a href="" data-toggle="tooltip" title="We do not ask your name or other personal details which can be associated with financial infromation put by you. We only need your email id so we can verify available data. We do not share any of our users information with a third party, we will use this inforamation to conduct our research on tax planning and develop a automated tax planning tool for our users.">Click Here</a></center></div>
-
-    
-      <br />
-      <div className="body-note">Note: We are not tax or investment advisors or planners. We do not cross sale or advertise or advise any financial products, in future we aim to provide fee based unbiased information and planning services for our users so they can take an informed decision. Currently we are conducting a research and we do not assume any liability on use of this website.</div>
-     <div className="body-last">Disclaimer: By providing links to any other sites, we do not guarantee, approve, or endorse the information or products available on these sites.</div>
-      <br />
+      
       </div>
     );
   }
