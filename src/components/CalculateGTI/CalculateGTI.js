@@ -1954,7 +1954,7 @@ onGridReady = params => {
         height: '550px', 
         width: "100%" }} 
       >
-        <AgGridReact id="calculateGTI"
+       <AgGridReact id="calculateGTI"
           columnDefs={this.state.columnDefs}
           rowData={this.state.rowData}
             treeData={true}
