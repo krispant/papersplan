@@ -58,7 +58,8 @@ padding-left: 50px;
 }
 
 .navBarClr{
-   background-color: #ab479140;
+  /* background-color: #ab479140;*/
+  background-color: rgba(171,71,145,0.25);
 }
 
 
